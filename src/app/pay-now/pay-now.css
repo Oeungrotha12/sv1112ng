@@ -1,0 +1,215 @@
+
+:root {
+            --primary-color: #3a86ff;
+            --secondary-color: #ff006e;
+            --accent-color: #8338ec;
+            --light-bg: #f8f9fa;
+            --dark-text: #212529;
+            --success-color: #4cc9f0;
+            --border-radius: 12px;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-text);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        
+        .checkout-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .checkout-card {
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background: white;
+        }
+        
+        .checkout-header {
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .checkout-header h2 {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .checkout-body {
+            padding: 30px;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            font-weight: 600;
+            color: var(--dark-text);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+        
+        .order-item {
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: var(--light-bg);
+            border-left: 4px solid var(--primary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .order-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .product-name {
+            font-weight: 600;
+            color: var(--dark-text);
+            margin-bottom: 5px;
+        }
+        
+        .product-detail {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 3px;
+        }
+        
+        .quantity-input {
+            width: 70px;
+            text-align: center;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 5px;
+            font-weight: 500;
+        }
+        
+        .total-price {
+            font-weight: 700;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+        }
+        
+        .payment-method-card {
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .payment-method-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .payment-method-card.active {
+            border-color: var(--primary-color);
+            background-color: rgba(58, 134, 255, 0.05);
+        }
+        
+        .payment-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .form-control {
+            border-radius: 8px;
+            padding: 12px 15px;
+            border: 1px solid #dee2e6;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(58, 134, 255, 0.25);
+        }
+        
+        .btn-pay {
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 8px;
+            padding: 15px 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .btn-pay:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .grand-total {
+            background: var(--light-bg);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .grand-total-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark-text);
+        }
+        
+        .grand-total-amount {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .checkout-body {
+                padding: 20px;
+            }
+            
+            .order-item {
+                padding: 15px;
+            }
+            
+            .payment-method-card {
+                padding: 15px;
+            }
+        }
+        
+        /* Animation for items */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .order-item {
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        .custom-select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%233a86ff' viewBox='0 0 16 16'%3E%3Cpath d='M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 16px;
+            padding-right: 40px;
+        }

@@ -1,0 +1,46 @@
+body {
+  background: linear-gradient(to right, #000000, #5e5e5e);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.contact-section {
+  padding: 50px 0;
+}
+
+.contact-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.store-info h5 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  border-radius: 10px;
+}
+
+.form-control:focus {
+  border-color: #28a745;
+  box-shadow: none;
+}
+
+.btn-submit {
+  background-color: #000000;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.btn-submit:hover {
+  background-color: #212121;
+}
+
+.title {
+  color: #f3f3f3;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
