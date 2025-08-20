@@ -25,11 +25,11 @@
                     <span class="text-muted">{{ item.price | currency }}</span>
                 </div>
                 <div class="col-md-3 quantity-buttons">
-                    <button class="btn btn-outline-secondary" (click)="cardService.decrementqty(item)">
+                    <button class="" (click)="cardService.decrementqty(item)">
                         –
                     </button>
                     <input type="text" [value]="item.qty" class="form-control text-center mx-1" readonly />
-                    <button class="btn btn-outline-secondary" (click)="cardService.incrementqty(item)">
+                    <button class="" (click)="cardService.incrementqty(item)">
                         +
                     </button>
                 </div>

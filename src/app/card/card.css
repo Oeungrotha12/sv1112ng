@@ -102,7 +102,7 @@
         
         .quantity-buttons button:hover {
             background: var(--light-bg);
-            border-color: #adb5bd;
+            border-color: #000000;
         }
         
         .quantity-buttons input {
@@ -151,7 +151,7 @@
         
         .btn-outline-danger:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+            box-shadow: 0 4px 8px rgba(21, 0, 255, 0.3);
         }
         
         .empty-cart {
